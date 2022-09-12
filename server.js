@@ -20,7 +20,7 @@ app.use("/api/v1", authRoute);
 app.use("/api/v1", imageRoute);
 
 app.get("/", (req, res) => {
-    res.send("Workign here properly");
+    res.send("Rest api method in nodejs which allows only authenticated users to upload the image of maximum size of 500KB.");
   });
 
 app.listen(PORT, () => {
