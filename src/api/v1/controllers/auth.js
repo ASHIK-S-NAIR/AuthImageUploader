@@ -23,6 +23,7 @@ exports.signup = async (req, res) => {
       .status(201)
       .json({ userFirstName, userLastName, userEmail, userPhoneNumber });
   } catch (error) {
+    console.log("eror", error.message)
     return res.status(500).json({
       message: "Failed to signup",
     });
