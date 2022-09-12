@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const multer = require("multer");
-const { uploadImage } = require("../controllers/images");
+const { uploadImage } = require("../controllers/image");
 const maxSize = 0.5 * 1024 * 1024;
 var upload = multer({
   dest: "uploads/",
@@ -20,7 +20,7 @@ var upload = multer({
   limits: { fileSize: maxSize },
 });
 const { isSignedIn, isAuthenticated } = require("../middleware/auth");
-const { getUserById } = require("../middleware/users");
+const { getUserById } = require("../middleware/user");
 const { imageSchema } = require("../middleware/validation/imageSchema");
 const {
   validateRequestSchema,

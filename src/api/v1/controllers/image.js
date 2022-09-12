@@ -1,4 +1,4 @@
-const Image = require("../models/images");
+const Image = require("../models/image");
 const cloudinary = require("../../../../setup/cloudinary");
 const fs = require("fs");
 const util = require("util");
